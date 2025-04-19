@@ -1,0 +1,20 @@
+.bg-banner {
+    background-color: rgb(198, 198, 198);
+    background: url('../../assets/img/nursery-banner.jpg');
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.color-text-hover:hover .color-bg {
+    opacity: 1;
+    background-color: rgb(129, 215, 66);
+}
+
+.color-text-hover:hover .color-icon {
+    opacity: 1;
+}
+
+.color-icon:hover {
+    /* opacity: 1; */
+}

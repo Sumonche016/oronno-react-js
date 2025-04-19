@@ -1,0 +1,271 @@
+.card-shadow {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
+.cart-icons {
+  opacity: 0;
+  transform: translateY(20px) translateZ(0);
+  transition: all 0.4s;
+}
+.card-parent:hover .cart-icons {
+  opacity: 1;
+
+  bottom: 115px;
+  transform: translateY(20) translateZ(0);
+  transition: all 0.4s;
+}
+
+.sm-cart-icons {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px) translateZ(0);
+  transition: all 0.4s;
+}
+
+.card-parent:hover .sm-cart-icons {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0) translateZ(0);
+  transition: all 0.4s;
+}
+
+.hover-image {
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.4s;
+}
+
+.card-parent:hover .hover-image {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-parent:hover .hover-image {
+  transform: scale(1.05);
+  transition: all ease-in-out 0.6s;
+}
+
+/* amader ponno css */
+.my-border-1,
+.my-border-2,
+.my-border {
+  border: 1px solid #81d742;
+}
+
+.hover-product:hover .my-border-1 {
+  transform: scaleX(9);
+  border-width: 100%;
+  transition: all 0.5s ease-out;
+}
+
+/* Flaash sale border */
+.hover-product:hover .my-border-2 {
+  transform: scaleX(25);
+  border-width: 100%;
+  transition: all 0.9s ease-in-out;
+}
+
+/* for slider  */
+
+.fade-slider {
+  position: relative;
+}
+
+.fade-slider img {
+  width: 100%;
+  height: 70vh !important;
+  object-fit: cover;
+}
+
+.fade-slider {
+  position: relative;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  display: flex !important;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1;
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button:before {
+  color: #fff;
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #000;
+}
+
+.fade-slider {
+  position: relative;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 30%;
+}
+
+.top-text {
+  animation: top-text 0.7s ease forwards;
+}
+
+.bottom-text {
+  animation: bottom-text 1s ease forwards;
+}
+
+.button-slider {
+  animation: button-slider 1s ease-in-out;
+}
+
+@keyframes top-text {
+  from {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-text {
+  from {
+    transform: translateX(-30rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes button-slider {
+  from {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.button-big {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 50px;
+  padding: 0 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+  color: #fff;
+  border: none;
+  background-color: #3a9943;
+  padding: 0 25px;
+  cursor: pointer;
+}
+
+.box-shadow-deep {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+/* //swiper slider  */
+
+@media (min-width: 768px) {
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: -5px !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: -5px !important;
+  }
+}
+
+.swiper-button-next {
+  background-image: url(../../../assets/Images/next.png) !important;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none !important;
+}
+.swiper-button-prev {
+  background-image: url(../../../assets/Images/next.png) !important;
+  width: 30px;
+  height: 30px;
+  rotate: 180deg;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+.contact-left {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#28b485),
+    to(#7ed56f)
+  );
+}
+
+.contact-us {
+  /* box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); */
+  border: 1px solid #e5e5e5;
+}
+.contact-btn {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#28b485),
+    to(#7ed56f)
+  ) !important;
+}
+
+.belive-text {
+  background: url(../../../assets/Images/newsletter.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 48px 0 243px 0;
+  background-size: cover;
+}
+
+.margin-box {
+  padding: 50px 0 37px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  /* margin: -195px 0 0; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* margin: -195px 0 0; */
+}
+
+.swiper-slide swiper-slide-active {
+  margin-right: 30px !important;
+}

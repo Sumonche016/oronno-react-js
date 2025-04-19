@@ -1,0 +1,76 @@
+/* Google Fonts Hind Siliguri || font-family: 'Hind Siliguri', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+.active_nav::after {
+  content: "";
+  position: absolute;
+  background-color: #81d742;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  border-radius: 5px;
+  bottom: -3px;
+}
+.detail_title::after {
+  content: "";
+  position: absolute;
+  background-color: #81d742;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  border-radius: 5px;
+  bottom: -3px;
+}
+
+/* scrollbar style  */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ececec;
+  border: 5px solid #ececec;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+  border: 5px solid #777;
+  border-radius: 3px;
+}
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+.fb_dialog iframe {
+  bottom: 85px !important;
+}
+.custom-spinner .ant-spin-dot i {
+  background-color: #095723; /* First color */
+}
+
+.custom-spinner .ant-spin-dot-item {
+  background-color: #059669; /* Second color */
+}
+
+.custom-spinner .ant-spin-dot {
+  font-size: 48px; /* Increase the size */
+}
