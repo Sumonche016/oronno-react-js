@@ -8,6 +8,7 @@ import BeliveText from "./BeliveText";
 import FaqIndex from "./FAQ/FaqIndex";
 import TrustedCompany from "./TrustedCompnay";
 import RentalService from "./RentalService";
+import Pakage from "./Pakage";
 
 const HomeIndex = () => {
   return (
@@ -16,9 +17,11 @@ const HomeIndex = () => {
       {/* <FlashSell /> */}
       {/* <BeliveText /> */}
 
-      <RentalService/>
-      <TrustedCompany/>
-    
+      <RentalService />
+      <TrustedCompany />
+
+      <Pakage />
+
       <AmaderPonnosomuho />
       <FaqIndex />
       <ContactUs />
