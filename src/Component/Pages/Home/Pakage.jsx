@@ -146,6 +146,20 @@ const Pakage = () => {
           </div>
         </div>
 
+        <div className="mb-4 p-3 bg-green-50 rounded-md border border-green-200">
+          <p className="text-green-800 font-medium text-center">
+            লাইভ ছবি পেতে WhatsApp নাম্বারে যোগাযোগ করুন:{" "}
+            <a
+              href="https://wa.me/8801711258558"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-600 hover:text-green-700 underline"
+            >
+              01711258558
+            </a>
+          </p>
+        </div>
+
         <Form
           form={form}
           name="order"
