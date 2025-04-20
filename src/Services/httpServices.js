@@ -3,7 +3,7 @@ import axios from "axios";
 import properties from "../config/properties";
 
 const custom_axios = axios.create({
-    baseURL: import.meta.env.VITE_REACT_APP_SERVER_URL,
+    baseURL: "https://aronno.advmhkabir.com",
     withCredentials: true,
 });
 
