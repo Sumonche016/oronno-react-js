@@ -89,7 +89,7 @@ const ContactUs = () => {
                       rel="noopener noreferrer"
                       className="text-blue-500"
                     >
-                      Charabug, Ashulia, Savar, Dhaka
+                      South city, Golapgram, Birulia, Savar
                     </a>
                   </h1>
                 </div>
