@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import video from "../../../assets/video/video.mp4";
-import logo from "../../../assets/Images/logo.png";
+import logo from "../../../assets/Images/logo-green.png";
 import { AiOutlineSwapRight } from "react-icons/ai";
 import { FcOk } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
