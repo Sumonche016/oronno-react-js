@@ -80,11 +80,11 @@ function App() {
     return <div>Something went wrong</div>;
   }
 
-  if (isLoading) {
-    return (
-      <NewLoading/>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <NewLoading/>
+  //   );
+  // }
   return (
     <div className="App bg-[#f3f6f9]">
       <NavBarChange />
