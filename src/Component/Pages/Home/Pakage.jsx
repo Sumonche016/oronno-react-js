@@ -305,7 +305,7 @@ const Pakage = () => {
                 )}
                 {isPlants && (
                   <p className="text-green-600 text-sm md:text-base">
-                    ৫'' পট সহ
+                    ৫'' প্লাস্টিক পট সহ
                   </p>
                 )}
               </div>
