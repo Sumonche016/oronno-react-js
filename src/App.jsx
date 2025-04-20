@@ -44,7 +44,7 @@ import UserLogin from "./Component/Pages/Login/UserLogin";
 import loadingImage from "./assets/Images/loading.gif";
 import NavBarChange from "./Component/SharedComponent/Navbar/NavBarChange";
 import OrderDetails from "./Component/Pages/Admin/OrderDetails";
-import UserSignUp from "./Component/Pages/Register/UserSignup";
+
 import { useGetAllBannerQuery } from "./Redux/banner/bannerApi";
 import TermsIndex from "./Component/Pages/TermsAndCondition/TermsIndex";
 import AboutIndex from "./Component/Pages/AboutUs/AboutIndex";
@@ -94,7 +94,7 @@ function App() {
         <Route path="/" element={<HomeIndex />} />
         <Route path="/search-result" element={<SearchResult />} />
         <Route path="/login" element={<UserLogin />} />
-        <Route path="/signUp" element={<UserSignUp />} />
+        {/* <Route path="/signUp" element={<UserSignUp />} /> */}
         <Route path="/terms-condition" element={<TermsIndex />} />
         <Route path="/about-us" element={<AboutIndex />} />
         <Route path="/হোম" element={<HomeIndex />} />
