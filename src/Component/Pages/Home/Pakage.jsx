@@ -69,7 +69,7 @@ const Pakage = () => {
   const onFinish = async (values) => {
     try {
       setIsSubmitting(true);
-      const deliveryFee = selectedPackage.price === "৳499" ? 150 : 200;
+      const deliveryFee = selectedPackage.price === "৳499" ? 200 : 250;
       const packagePrice = parseInt(selectedPackage.price.replace("৳", ""));
       const totalPrice = packagePrice + deliveryFee;
 
@@ -106,7 +106,7 @@ const Pakage = () => {
   };
 
   const calculateTotal = (price) => {
-    const deliveryFee = price === "৳499" ? 150 : 200;
+    const deliveryFee = price === "৳499" ? 200 : 250;
     const total = parseInt(price.replace("৳", "")) + deliveryFee;
     return total;
   };
@@ -114,7 +114,7 @@ const Pakage = () => {
   const renderModal = () => {
     if (!selectedPackage) return null;
 
-    const deliveryFee = selectedPackage.price === "৳499" ? 150 : 200;
+    const deliveryFee = selectedPackage.price === "৳499" ? 200 : 250;
     const total = calculateTotal(selectedPackage.price);
 
     return (
