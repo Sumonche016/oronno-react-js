@@ -27,20 +27,21 @@ const Pakage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const plants = [
-    { name: "ফিলডেনড্রন মুনলাইট", image: pakage1 },
-    { name: "মনষ্টেরা আদানসনি", image: pakage2 },
     { name: "ফিলডেনড্রন লেমন লাইম", image: pakage3 },
     { name: "এনজয় পোথস", image: pakage4 },
     { name: "ফিলডেনড্রন ব্রাসিল", image: pakage5 },
+    { name: "ফিলডেনড্রন মুনলাইট", image: pakage1 },
+    { name: "মনষ্টেরা আদানসনি", image: pakage2 },
   ];
 
   const fruits = [
     { name: "বারি মালটা", image: fol1 },
-    { name: "সিডলেস লেবু", image: fol2 },
+
     { name: "থাই মিষ্টি তেতুল", image: fol3 },
     { name: "সুপার আনার", image: fol4 },
     { name: "থাই ছফেদা", image: fol5 },
     { name: "থাই পেয়ারা", image: fol6 },
+    { name: "সিডলেস লেবু", image: fol2 },
   ];
 
   const showModal = (packageType, price) => {
