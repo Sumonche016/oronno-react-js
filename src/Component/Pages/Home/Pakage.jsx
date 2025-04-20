@@ -15,19 +15,19 @@ import fol6 from "../../../assets/fol/6.jpeg";
 
 const Pakage = () => {
   const plants = [
-    { name: "মনষ্টেরা আদানসনি", image: pakage1 },
-    { name: "এনজয় পোথস", image: pakage2 },
-    { name: "ফিলডেনড্রন মুনলাইট", image: pakage3 },
+    { name: "  ফিলডেনড্রন মুনলাইট", image: pakage1 },
+    { name: "মনষ্টেরা আদানসনি", image: pakage2 },
+    { name: "এনজয় পোথস ", image: pakage3 },
     { name: "ফিলডেনড্রন লেমন লাইম", image: pakage4 },
     { name: "ফিলডেনড্রন ব্রাসিল", image: pakage5 },
   ];
 
   const fruits = [
     { name: "বারি মালটা", image: fol1 },
-    { name: "থাই মিষ্টি তেতুল", image: fol2 },
-    { name: "সুপার আনার", image: fol3 },
-    { name: "থাই ছফেদা", image: fol4 },
-    { name: "সিডলেস লেবু", image: fol5 },
+    { name: "সিডলেস লেবু", image: fol2 },
+    { name: "থাই মিষ্টি তেতুল", image: fol3 },
+    { name: "সুপার আনার", image: fol4 },
+    { name: "থাই ছফেদা", image: fol5 },
     { name: "থাই পেয়ারা", image: fol6 },
   ];
 
