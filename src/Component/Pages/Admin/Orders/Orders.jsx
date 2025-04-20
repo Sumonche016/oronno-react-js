@@ -13,11 +13,14 @@ import { MdDetails } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import PackageOrders from "./PackageOrders";
+
 const Orders = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   const [searchTerm, setSearchTerm] = useState("");
+  const [activeTab, setActiveTab] = useState("products");
 
   const { data: allOderData, isLoading } = useAllOdderQuery();
 
@@ -172,36 +175,60 @@ const Orders = () => {
     .reverse();
 
   return (
-    <div className="">
-      <div className="p-6 bg-white  rounded-[10px]">
-        {/* <div className="flex justify-between my-2">
-          <h1 className="text-[1.6rem] font-medium">List Of Orders</h1>
-        </div> */}
-        <div className="mb-3 relative">
-          <input
-            type="text"
-            className="w-full font-medium px-[0.8125rem] py-[0.375rem] form-control border rounded-[2px] h-9 border-input text-[14px] pl-8"
-            placeholder="Search Product Here"
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <FiSearch
-            size={16}
-            className="absolute top-[.6rem] left-2 text-gray-400"
-          />
-        </div>
-
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <DataTable
-            columns={columns}
-            data={filterOrder}
-            striped
-            pagination
-            conditionalRowStyles={rowStyles}
-          />
-        )}
+    <div className="p-6 bg-white rounded-[10px]">
+      <div className="flex mb-4 border-b">
+        <button
+          className={`px-4 py-2 font-medium ${
+            activeTab === "products"
+              ? "border-b-2 border-primary text-primary"
+              : "text-gray-500"
+          }`}
+          onClick={() => setActiveTab("products")}
+        >
+          Products
+        </button>
+        <button
+          className={`px-4 py-2 font-medium ${
+            activeTab === "package"
+              ? "border-b-2 border-primary text-primary"
+              : "text-gray-500"
+          }`}
+          onClick={() => setActiveTab("package")}
+        >
+          Package
+        </button>
       </div>
+
+      {activeTab === "products" ? (
+        <>
+          <div className="mb-3 relative">
+            <input
+              type="text"
+              className="w-full font-medium px-[0.8125rem] py-[0.375rem] form-control border rounded-[2px] h-9 border-input text-[14px] pl-8"
+              placeholder="Search Orders Here"
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <FiSearch
+              size={16}
+              className="absolute top-[.6rem] left-2 text-gray-400"
+            />
+          </div>
+
+          {isLoading ? (
+            <Loading />
+          ) : (
+            <DataTable
+              columns={columns}
+              data={filterOrder}
+              striped
+              pagination
+              conditionalRowStyles={rowStyles}
+            />
+          )}
+        </>
+      ) : (
+        <PackageOrders />
+      )}
     </div>
   );
 };

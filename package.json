@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^6.0.0",
     "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
@@ -17,7 +18,7 @@
     "@mui/icons-material": "^5.14.0",
     "@mui/material": "^5.14.0",
     "@reduxjs/toolkit": "^1.9.5",
-    "antd": "^5.6.1",
+    "antd": "^5.24.7",
     "axios": "^1.4.0",
     "draft": "^0.2.3",
     "draft-js": "^0.11.7",
