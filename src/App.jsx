@@ -51,6 +51,7 @@ import AboutIndex from "./Component/Pages/AboutUs/AboutIndex";
 import RelentedProductLoading from "./loading/RelentedProductLoading";
 import AllUser from "./Component/Pages/Admin/User/AllUser";
 import NewLoading from "./loading/NewLoading.jsx";
+import Pakage from "./Component/Pages/Home/Pakage.jsx";
 
 function App() {
   const location = useLocation();
@@ -92,6 +93,7 @@ function App() {
       <Routes>
         <Route path="/loading" element={<RelentedProductLoading />} />
         <Route path="/" element={<HomeIndex />} />
+        <Route path="/pakage" element={<Pakage />} />
         <Route path="/search-result" element={<SearchResult />} />
         <Route path="/login" element={<UserLogin />} />
         {/* <Route path="/signUp" element={<UserSignUp />} /> */}
