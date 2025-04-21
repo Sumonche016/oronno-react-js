@@ -52,6 +52,8 @@ import RelentedProductLoading from "./loading/RelentedProductLoading";
 import AllUser from "./Component/Pages/Admin/User/AllUser";
 import NewLoading from "./loading/NewLoading.jsx";
 import Pakage from "./Component/Pages/Home/Pakage.jsx";
+import IndoorPlantPackage from "./Component/Pages/Home/IndoorPlantPackage";
+import FruitTreePackage from "./Component/Pages/Home/FruitTreePackage";
 
 function App() {
   const location = useLocation();
@@ -93,7 +95,8 @@ function App() {
       <Routes>
         <Route path="/loading" element={<RelentedProductLoading />} />
         <Route path="/" element={<HomeIndex />} />
-        <Route path="/pakage" element={<Pakage />} />
+        <Route path="/indorplant-pakage" element={<IndoorPlantPackage />} />
+        <Route path="/folgach-pakage" element={<FruitTreePackage />} />
         <Route path="/search-result" element={<SearchResult />} />
         <Route path="/login" element={<UserLogin />} />
         {/* <Route path="/signUp" element={<UserSignUp />} /> */}
@@ -155,8 +158,6 @@ function App() {
         <Route path="/admin/verify/:hash" element={<MailVerify />} />
         <Route path="/admin/reset-password" element={<ResetPassword />} />
       </Routes>
-
-      
 
       {/* add facebook page customer chat  */}
       {/* <CustomerChat /> */}
