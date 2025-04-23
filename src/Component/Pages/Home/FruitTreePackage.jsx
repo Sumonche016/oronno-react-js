@@ -17,7 +17,7 @@ import axios from "axios";
 
 const FruitTreePackage = () => {
   const [form] = Form.useForm();
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const fruits = [

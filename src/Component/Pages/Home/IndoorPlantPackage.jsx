@@ -16,7 +16,7 @@ import axios from "axios";
 
 const IndoorPlantPackage = () => {
   const [form] = Form.useForm();
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const plants = [
