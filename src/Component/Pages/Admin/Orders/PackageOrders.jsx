@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch, FiEye } from "react-icons/fi";
 import Loading from "../../../SharedComponent/Loading";
 import axios from "axios";
 
@@ -8,6 +8,8 @@ const PackageOrders = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [packageOrders, setPackageOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [selectedOrder, setSelectedOrder] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchPackageOrders = async () => {
@@ -55,6 +57,10 @@ const PackageOrders = () => {
       selector: "buyer_address",
       style: {
         fontWeight: "500",
+        maxWidth: "200px",
+        whiteSpace: "nowrap",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
       },
     },
     {
@@ -80,6 +86,21 @@ const PackageOrders = () => {
         fontWeight: "500",
       },
       cell: (row) => `${row.total_price} ৳`,
+    },
+    {
+      name: "Actions",
+      cell: (row) => (
+        <button
+          onClick={() => {
+            setSelectedOrder(row);
+            setIsModalOpen(true);
+          }}
+          className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 flex items-center gap-1"
+        >
+          <FiEye size={16} />
+          Details
+        </button>
+      ),
     },
   ];
 
@@ -119,13 +140,60 @@ const PackageOrders = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <DataTable
-          columns={columns}
-          data={filteredOrders}
-          striped
-          pagination
-          conditionalRowStyles={rowStyles}
-        />
+        <>
+          <DataTable
+            columns={columns}
+            data={filteredOrders}
+            striped
+            pagination
+            conditionalRowStyles={rowStyles}
+          />
+
+          {/* Modal */}
+          {isModalOpen && selectedOrder && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+              <div className="bg-white p-6 rounded-lg w-[90%] max-w-2xl">
+                <div className="flex justify-between items-center mb-4">
+                  <h2 className="text-xl font-semibold">Order Details</h2>
+                  <button
+                    onClick={() => setIsModalOpen(false)}
+                    className="text-gray-500 hover:text-gray-700"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h3 className="font-medium text-gray-700">Package Name</h3>
+                    <p className="mt-1">{selectedOrder.package_name}</p>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-gray-700">
+                      Buyer Information
+                    </h3>
+                    <p className="mt-1">Name: {selectedOrder.buyer_name}</p>
+                    <p className="mt-1">Phone: {selectedOrder.buyer_phone}</p>
+                    <p className="mt-1">
+                      Address: {selectedOrder.buyer_address}
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-gray-700">Price Details</h3>
+                    <p className="mt-1">
+                      Package Price: {selectedOrder.price} ৳
+                    </p>
+                    <p className="mt-1">
+                      Delivery Charge: {selectedOrder.delivery_charge} ৳
+                    </p>
+                    <p className="mt-1 font-semibold">
+                      Total Price: {selectedOrder.total_price} ৳
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       )}
     </div>
   );
