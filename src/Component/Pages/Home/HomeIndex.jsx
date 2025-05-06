@@ -9,6 +9,7 @@ import FaqIndex from "./FAQ/FaqIndex";
 import TrustedCompany from "./TrustedCompnay";
 import RentalService from "./RentalService";
 import Pakage from "./Pakage";
+import LandScapeing from "./LandScapeing";
 
 const HomeIndex = () => {
   return (
@@ -16,6 +17,7 @@ const HomeIndex = () => {
       <HeroSection />
       {/* <FlashSell /> */}
       {/* <BeliveText /> */}
+      <LandScapeing />
 
       <RentalService />
       <TrustedCompany />
