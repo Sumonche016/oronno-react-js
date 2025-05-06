@@ -9,6 +9,8 @@ const LandScapeing = () => {
   const [loading, setLoading] = useState(true);
 
   const categories = [
+    { name: "অফিস ইন্টেরিয়র", value: "অফিস ইন্টেরিয়র" },
+
     { name: "ছাদ বাগান", value: "ছাদ বাগান" },
     { name: "অফিস ইন্টেরিয়র", value: "অফিস ইন্টেরিয়র" },
     { name: "রেস্টুরেন্ট ইন্টেরিয়র", value: "রেস্টুরেন্ট ইন্টেরিয়র" },
