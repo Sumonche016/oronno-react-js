@@ -4,7 +4,7 @@ import LandScapeTab from "./LandScapeTab";
 import ContactUsButton from "../../ContactUsButton";
 
 const LandScapeing = () => {
-  const [selectedCategory, setSelectedCategory] = useState("ছাদ বাগান");
+  const [selectedCategory, setSelectedCategory] = useState("অফিস ইন্টেরিয়র");
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
